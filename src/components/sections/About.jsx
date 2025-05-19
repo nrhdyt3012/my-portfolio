@@ -68,10 +68,7 @@ export const About = () => {
                             <h4 className="font-semibold">Mobile Development Cohort on Bangkit Academy (Sep 2024 - Jan 2025)</h4>
                             <p> Developed application in kotlin language</p>
                             </div>
-                             <div>
-                            <h4 className="font-semibold">Inten at Koperasi Konsumen Syariah Baitul Makmur Barokah Jatim (Sep 2024 - Jan 2025)</h4>
-                            <p> Developed application in kotlin language</p>
-                            </div>        
+                           
                     </div>
                     </div>
                 </div>
