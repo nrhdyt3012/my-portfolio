@@ -22,11 +22,33 @@ export const Projects = () => {
       ],
       link: "https://github.com/Capstone-Ps109/PlantRo",
       images: [
-        "/images/gce-1.png",
-        "/images/gce-2.png",
-        "/images/gce-3.png",
-        "/images/gce-4.png",
-        "/images/gce-5.png",
+        "/images/gce-1.jpg",
+        "/images/gce-2.jpg",
+        "/images/gce-3.jpg",
+        "/images/gce-4.jpg",
+        "/images/gce-5.jpg",
+      ],
+    },
+    {
+      id: 2,
+      title: "Movie Catalog - Modular Clean Architecture App",
+      description:
+        "Successfully executed a cloud migration project effectively moving a monolith on-premise application to a scalable cloud-native architecture on Google Cloud Platform (GCP).Role: Cloud Engineer Objective: Reduce upfront infrastructure costs and improve scalability by deploying a web-based financial recording application (Money Tracker).Key Implementations:Microservices Deployment: Deployed separated services for Front-End (PHP/CodeIgniter) and Back-End (Node.js) using Google App Engine to ensure isolated scalability.Managed Database: Provisioned and secured Cloud SQL (MySQL) instances for reliable structured data storage, moving away from local database management.Object Storage Integration: Configured Google Cloud Storage buckets to handle unstructured data (transaction attachments/images) with proper public access policies.Security & IAM: Applied the Principle of Least Privilege using Service Accounts and IAM roles to secure communication between the application, database, and storage.\nTroubleshooting: Resolved dependency issues and configured environment variables for seamless API communication between services.",
+      technologies: [
+        "Kotlin",
+        "Android XML",
+        "Room Database",
+        "Retrofit",
+        "Dagger Hilt/Koin",
+        "Gradle",
+        "GitHub Actions (CI)",
+      ],
+      link: "https://github.com/Capstone-Ps109/PlantRo",
+      images: [
+        "/images/mcl-1.jpg",
+        "/images/mcl-2.jpg",
+        "/images/mcl-3.jpg",
+        "/images/mcl-4.jpg",
       ],
     },
   ];
