@@ -1,4 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+<<<<<<< HEAD
 import { GraduationCap, Briefcase, Award, Code2 } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
@@ -202,104 +203,87 @@ export const About = () => {
                           <span className="text-blue-400 text-sm font-medium">
                             {skill.level}%
                           </span>
+=======
+export const About = () => {
+
+    const frontendSkills = ["React", "TypeScript", "TailwindCSS", "Svelte"];
+    const backendSkills = ["NodeJS","Python", "MongoDB", "PostgreeSQL", "Svelte"];
+
+    return (
+        <section id="about" className="min-h-screen flex items-center justify-center py-20">
+                    <RevealOnScroll>
+            
+            <div className="max-w-3xl mx-auto px-4">
+                <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+                    {""}
+                    About Me
+                    </h2>
+                <div className="glass rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
+                    <p className="text-gray-300 text-lg mb-6">
+                        💡 I have a strong interest in Mobile Development, Backend, Data Analysis, and Frontend Development.
+                        I have studied Android application development using Kotlin.
+                        In the data field, I am experienced in data exploration, visualization, and processing using Python, R, and Excel.
+                        For frontend development, I am proficient in HTML, CSS, and JavaScript, as well as frameworks like ReactJS and Vue.js. I also have experience with PHP and Laravel in building responsive and dynamic user interfaces.
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
+                            <h3 className="text-xl font-bold mb-4">FrontEnd</h3>
+                            <div className="flex flex-wrap gap-2 ">
+                                {frontendSkills.map((tech, key) => (
+                                    <span key={tech} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
+                                    hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition
+                                    ">
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+>>>>>>> parent of 2834c6a (optimize my home)
                         </div>
-                        <div className="h-2 bg-white/10 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full transition-all duration-1000 ease-out"
-                            style={{ width: `${skill.level}%` }}
-                          />
+                         <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
+                            <h3 className="text-xl font-bold mb-4">FrontEnd</h3>
+                            <div className="flex flex-wrap gap-2 ">
+                                {backendSkills.map((tech, key) => (
+                                    <span key={tech} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
+                                    hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition
+                                    ">
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
+                    </div>
                 </div>
-              ))}
-            </div>
-          </div>
 
-          {/* Education & Experience */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Education */}
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/[0.07] transition-all">
-              <div className="flex items-center gap-3 mb-4">
-                <GraduationCap className="w-6 h-6 text-blue-400" />
-                <h3 className="text-xl font-bold text-gray-100">Education</h3>
-              </div>
-              <div className="space-y-4">
-                <div className="border-l-2 border-blue-500/30 pl-4">
-                  <h4 className="font-semibold text-gray-200">
-                    Information Systems
-                  </h4>
-                  <p className="text-blue-400 text-sm">
-                    Surabaya State University
-                  </p>
-                  <p className="text-gray-400 text-sm">2022 - Present</p>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    <span className="text-xs bg-blue-500/10 text-blue-400 px-2 py-1 rounded">
-                      Data Structures
-                    </span>
-                    <span className="text-xs bg-blue-500/10 text-blue-400 px-2 py-1 rounded">
-                      Web Dev
-                    </span>
-                    <span className="text-xs bg-blue-500/10 text-blue-400 px-2 py-1 rounded">
-                      OOP
-                    </span>
-                  </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
+                    <h3 className="text-xl font-bold  mb-4 ">🧑‍🎓Education</h3>
+                    <ul className="list-disc list-inside text-gray-300 space-y-2">
+                        <li>
+                            <strong>Information System - Surabaya State of University (2022- Now)</strong>
+                        </li>
+                        <li>
+                            <strong>Relevant Coursework :Data Structure and Algorithm ,Web Development ,Object Oriented Programming</strong>
+                        </li>
+                    </ul>
+                    </div>
+
+                    <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
+                    <h3 className="text-xl font-bold  mb-4 ">👨‍💼 Work Experience</h3>
+                    <div className="space-y-4 text-gray-100">
+                           <div>
+                            <h4 className="font-semibold">Mobile Development Cohort on Bangkit Academy (Sep 2024 - Jan 2025)</h4>
+                            <p> Developed application in kotlin language</p>
+                            </div>
+                           
+                    </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Experience */}
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/[0.07] transition-all">
-              <div className="flex items-center gap-3 mb-4">
-                <Briefcase className="w-6 h-6 text-blue-400" />
-                <h3 className="text-xl font-bold text-gray-100">Experience</h3>
-              </div>
-              <div className="space-y-4">
-                <div className="border-l-2 border-blue-500/30 pl-4">
-                  <h4 className="font-semibold text-gray-200">
-                    Mobile Development Cohort
-                  </h4>
-                  <p className="text-blue-400 text-sm">Bangkit Academy</p>
-                  <p className="text-gray-400 text-sm">Sep 2024 - Jan 2025</p>
-                  <p className="text-gray-300 text-sm mt-2">
-                    Developed Android applications using Kotlin, Jetpack
-                    Compose, and modern architecture patterns
-                  </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    
                 </div>
-              </div>
             </div>
-          </div>
+                                </RevealOnScroll>
 
-          {/* Certifications */}
-          <div className="mt-6 bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/[0.07] transition-all">
-            <div className="flex items-center gap-3 mb-4">
-              <Award className="w-6 h-6 text-blue-400" />
-              <h3 className="text-xl font-bold text-gray-100">
-                Certifications & Achievements
-              </h3>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <div className="flex items-center gap-2 text-gray-300 text-sm">
-                <span className="text-blue-400">✓</span>
-                Bangkit Academy - Mobile Development
-              </div>
-              <div className="flex items-center gap-2 text-gray-300 text-sm">
-                <span className="text-blue-400">✓</span>
-                Dicoding - Android Expert
-              </div>
-              <div className="flex items-center gap-2 text-gray-300 text-sm">
-                <span className="text-blue-400">✓</span>
-                Google Cloud Platform Fundamentals
-              </div>
-              <div className="flex items-center gap-2 text-gray-300 text-sm">
-                <span className="text-blue-400">✓</span>
-                Data Analysis with Python & R
-              </div>
-            </div>
-          </div>
-        </div>
-      </RevealOnScroll>
-    </section>
-  );
-};
+        </section>
+    )
+}
