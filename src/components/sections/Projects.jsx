@@ -15,7 +15,7 @@ export const Projects = () => {
 
   const categories = [
     { id: "all", label: "All Projects", icon: "🚀" },
-    { id: "cloud", label: "Cloud", icon: "☁️" },
+    { id: "cloud", label: "Cloud + Backend", icon: "☁️" },
     { id: "mobile", label: "Mobile", icon: "📱" },
     { id: "web", label: "Web", icon: "🌐" },
     { id: "data", label: "Data", icon: "📊" },
@@ -148,6 +148,226 @@ export const Projects = () => {
       ],
       link: "https://github.com/yourusername/asclepius",
       images: ["images/asc-1.jpg", "images/asc-2.jpg"],
+      imageOrientation: "landscape",
+    },
+    {
+      id: 6,
+      title: "PlantRo - Smart Crop Rotation Recommendation System",
+      category: "mobile",
+      shortDescription:
+        "Aplikasi mobile Android yang memberikan rekomendasi rotasi tanaman berbasis data untuk pertanian berkelanjutan di Indonesia.",
+      fullDescription: `PlantRo (Plant Rotation) adalah aplikasi mobile berbasis Android yang menyediakan rekomendasi rotasi tanaman berbasis data untuk mendukung pertanian berkelanjutan di Indonesia. Aplikasi ini mengintegrasikan teknologi Machine Learning, Cloud Computing, dan Mobile Development untuk menganalisis kebutuhan nutrisi tanaman, pH tanah, suhu, kelembaban, dan kebutuhan air guna membantu petani menjaga kesuburan tanah, meningkatkan produktivitas, dan mengurangi risiko hama serta penyakit.
+Fitur Utama:
+
+Analisis kondisi lahan berdasarkan input kadar Nitrogen, Fosfor, Kalium, pH, suhu, kelembaban, dan curah hujan
+Rekomendasi rotasi tanaman menggunakan model Machine Learning dengan confidence score
+Riwayat prediksi untuk tracking dan monitoring
+Marketplace benih dan pupuk terintegrasi
+Interface yang user-friendly dengan Material Design
+
+Teknologi yang Digunakan:
+
+Kotlin untuk pengembangan Android native
+MVVM Architecture Pattern
+Retrofit untuk REST API integration
+DataStore untuk persistent storage
+Coroutines & Flow untuk asynchronous programming
+Material Design Components
+Cloud API integration untuk ML predictions
+Firebase Authentication untuk user management
+
+Kontribusi Saya:
+Sebagai Mobile Developer, saya bertanggung jawab dalam:
+
+Merancang dan mengimplementasikan arsitektur aplikasi menggunakan MVVM pattern
+Mengembangkan UI/UX yang intuitif dan responsif dengan Material Design
+Mengintegrasikan API Machine Learning untuk prediksi rotasi tanaman
+Implementasi autentikasi dan manajemen session pengguna
+Membangun fitur input kondisi lahan dengan validasi
+Mengembangkan sistem riwayat prediksi dengan RecyclerView
+Optimasi performa aplikasi dan handling error
+
+Dampak:
+Aplikasi ini membantu petani membuat keputusan berbasis data untuk optimasi praktik pertanian, mendukung ketahanan pangan, dan mendorong inovasi digital serta adaptasi perubahan iklim di sektor pertanian Indonesia.`,
+      technologies: [
+        "Android",
+        "Kotlin",
+        "XML",
+        "Retrofit",
+        "Dependency Injection",
+        "REST APIs",
+      ],
+      link: "https://github.com/yourusername/asclepius",
+      images: [
+        "images/plt-1.jpg",
+        "images/plt-2.jpg",
+        "images/plt-3.jpg",
+        "images/plt-4.jpg",
+        "images/plt-5.jpg",
+        "images/plt-6.jpg",
+      ],
+      imageOrientation: "portrait",
+    },
+    {
+      id: 7,
+      title: "Dicoding Story - Social App with Maps, Paging 3 & Testing",
+      category: "mobile",
+      shortDescription:
+        "Aplikasi mobile Android yang memberikan rekomendasi rotasi tanaman berbasis data untuk pertanian berkelanjutan di Indonesia.",
+      fullDescription: `Developed a feature-rich social media application enabling users to share stories through photos and descriptions, integrated with geolocation features. This project serves as the final submission for the Intermediate Android Development course.
+
+Key Technical Features:
+
+Advanced UI & UX: Created Custom Views for authentication (email/password validation) and implemented fluid animations (Property & Shared Element Transitions) for a seamless user experience.
+
+Efficient Data Handling: Implemented Paging 3 library with RemoteMediator to handle large datasets (infinite scrolling) efficiently from the REST API.
+
+Geolocation Integration: Integrated Google Maps SDK to visualize story locations via markers and allow users to tag their position when posting.
+
+Robust Architecture: Built using Clean Architecture principles with MVVM pattern, Repository pattern, and Dependency Injection.
+
+Quality Assurance: Wrote comprehensive Unit Tests using Mockito to verify the logic of the Paging Data and ViewModel, ensuring app reliability.`,
+      technologies: [
+        "Android",
+        "Kotlin",
+        "XML",
+        "Paging 3",
+        "Mockito",
+        "REST APIs",
+        "Google Maps API",
+        "Animation",
+        "Android Development",
+      ],
+      link: "https://github.com/yourusername/asclepius",
+      images: ["images/dcs-1.jpg"],
+      imageOrientation: "landscape",
+    },
+    {
+      id: 8,
+      title: "Open Music API Scalable Backend with Redis, RabbitMQ & Mailtrap",
+      category: "cloud",
+      shortDescription:
+        "Engineered the final version of the OpenMusic API, a scalable RESTful backend service for a music application. This project focuses on handling high-concurrency scenarios and complex data processing.",
+      fullDescription: `Engineered the final version of the OpenMusic API, a scalable RESTful backend service for a music application. This project focuses on handling high-concurrency scenarios and complex data processing.
+
+Key Architecture Upgrades:
+
+Performance (Caching): Implemented Redis for server-side caching on high-traffic endpoints (e.g., Album Likes), significantly reducing database load.
+
+Asynchronous Processing: Integrated RabbitMQ to decouple heavy operations (playlist exports). A separate Consumer service handles these tasks in the background to prevent main-thread blocking.
+
+Storage & Database: Utilized AWS S3 for media storage (Cover Art) and PostgreSQL for structured data persistence.`,
+      technologies: [
+        "Node.js",
+        "Hapi Framework",
+        "PostgreSQL",
+        "Redis",
+        "RabbitMQ",
+        "Mail Servers",
+      ],
+      link: "https://github.com/yourusername/asclepius",
+      images: [
+        "images/opm-1.jpg",
+        "images/opm-2.jpg",
+        "images/opm-3.jpg",
+        "images/opm-4.jpg",
+        "images/opm-5.jpg",
+      ],
+      imageOrientation: "landscape",
+    },
+    {
+      id: 9,
+      title:
+        "Web-Based SPP Payment Management Information System - Pondok Pesantren Pelajar Mahasiswa Baitul Makmur",
+      category: "web",
+      shortDescription:
+        "Designed and developed a web-based SPP (school fee) payment management information system with digital payment integration for Pondok Pesantren Pelajar Mahasiswa Baitul Makmur (Baitul Makmur Islamic Boarding School).",
+      fullDescription: `Designed and developed a web-based SPP (school fee) payment management information system with digital payment integration for Pondok Pesantren Pelajar Mahasiswa Baitul Makmur (Baitul Makmur Islamic Boarding School). This system replaces the previous manual payment process that was prone to recording errors, long verification queues, and limited access to real-time payment status information.
+The system was developed using the Rapid Application Development (RAD) methodology, enabling fast development with intensive iterations and actively involving users at every stage. This digital solution provides transparency, efficiency, and easy access for student guardians and boarding school administrators.
+Key Features:
+
+Admin dashboard with student statistics, billing, and revenue tracking
+Student data management and SPP billing master data
+Automated billing assignment system for students
+Multi-method digital payment integration (Virtual Account, E-wallet, QRIS) through Midtrans
+Payment and arrears reports with graph visualization
+Automatic payment receipt printing
+Real-time payment status notifications
+Student portal to view personal information, bills, and payment history`,
+      technologies: [
+        "Next.js",
+        "React.js ",
+        "TypeScript ",
+        "Tailwind CSS",
+        "React Hooks",
+      ],
+      link: "https://github.com/yourusername/asclepius",
+      images: [
+        "images/ppm-1.jpg",
+        "images/ppm-2.jpg",
+        "images/ppm-3.jpg",
+        "images/ppm-4.jpg",
+        "images/ppm-5.jpg",
+        "images/ppm-6.jpg",
+        "images/ppm-7.jpg",
+        "images/ppm-8.jpg",
+        "images/ppm-9.jpg",
+        "images/ppm-10.jpg",
+      ],
+      imageOrientation: "landscape",
+    },
+    {
+      id: 10,
+      title: "myFish - Marine Encyclopedia App with Jetpack Compose",
+      category: "mobile",
+      shortDescription:
+        "Developed myFish, a modern Android application built entirely with Jetpack Compose that serves as a digital encyclopedia for various fish species. This project showcases the implementation of Modern Android Development (MAD) standards.",
+      fullDescription: `Developed myFish, a modern Android application built entirely with Jetpack Compose that serves as a digital encyclopedia for various fish species. This project showcases the implementation of Modern Android Development (MAD) standards.
+
+Key Features & Tech Specs:
+
+Declarative UI: Built 100% using Kotlin Composables (no XML), utilizing Material Design 3 components for a sleek look.
+
+Efficient Data Rendering: Implemented LazyColumn to display the list of fish species efficiently, ensuring smooth scrolling performance even with large datasets.
+
+Navigation & Data Passing: Used Navigation Compose to route users from the main list to a detailed information page for each specific fish.
+
+State Management: Applied ViewModel and State Hoisting to handle data flow and ensure the UI reacts correctly to user interactions (e.g., searching for a specific fish name).
+
+Search Feature: Integrated real-time filtering logic to allow users to quickly find fish species by name.`,
+      technologies: ["Kotlin", "Jetpack Compose", "Navigation Component"],
+      link: "https://github.com/yourusername/asclepius",
+      images: ["images/mf-1.jpg", "images/mf-2.jpg"],
+      imageOrientation: "portrait",
+    },
+    {
+      id: 11,
+      title: "Data Analysis | SQL, Tableau, Power BI & Excel | Real Projects",
+      category: "data",
+      shortDescription:
+        "Data Analyst dengan fondasi kuat dalam pengolahan database (SQL) dan analisis data (Excel & Statistik). Mahir menerjemahkan data menjadi insight visual melalui Tableau dan Power BI, serta memanfaatkan AI (ChatGPT) untuk efisiensi scripting dan eksplorasi solusi.",
+      fullDescription: `Dalam Projek ini saya mempelajari:
+🟦 SQL Fundamentals
+ Belajar mulai dari dasar SELECT, JOIN, hingga subqueries & aggregate function. SQL menjadi fondasi kuat saya dalam memahami struktur dan eksplorasi data.
+📈 Tableau Fundamentals
+ Menghubungkan berbagai data source dan membuat dashboard interaktif dengan drag-and-drop. Visualisasi data jadi makin menyenangkan dan informatif!
+🟨 Power BI Essentials
+ Belajar membuat report dinamis dan interaktif, mulai dari transformasi data, relasi antar tabel, hingga membangun dashboard untuk decision-making.
+📊 Excel for Data Analysis
+ Mengasah kemampuan menggunakan Pivot Table, conditional formatting, dan data cleaning. Excel tetap jadi senjata andalan buat analisis cepat!
+🤖 Menggunakan ChatGPT sebagai Data Analyst
+ Menggunakan ChatGPT untuk bantu menulis query SQL, generate script otomatis, dan bantu ide analisis. Kolaborasi manusia & AI yang produktif!
+📉 Statistik Dasar untuk Analisis Data
+ Mempelajari konsep penting seperti mean, median, mode, hingga standard deviation untuk memahami makna di balik angka.`,
+      technologies: ["SQL", "Tableau", "Power BI", "Excel", "ChatGPT"],
+      link: "https://github.com/yourusername/asclepius",
+      images: [
+        "images/daudm-1.jpg",
+        "images/daudm-2.jpg",
+        "images/daudm-3.jpg",
+        "images/daudm-4.jpg",
+        "images/daudm-5.jpg",
+      ],
       imageOrientation: "landscape",
     },
   ];
