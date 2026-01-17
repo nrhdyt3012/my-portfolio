@@ -76,48 +76,78 @@ export const Projects = () => {
     },
     {
       id: 3,
-      title: "E-Commerce Dashboard",
-      category: "web",
+      title: "SAKTI - Sistem Aplikasi Konfigurasi dan Transformasi Inovatif",
+      category: "mobile",
       shortDescription:
-        "Full-stack e-commerce admin dashboard with real-time analytics and inventory management.",
+        "Pengembangan aplikasi lintas platform (Web & Android) untuk Change Management System Pemda. Fitur utama mencakup API Integration (Service Desk/Asset Mgmt), Real-time Monitoring, dan modul inspeksi lapangan. Perancangan sistem berbasis UML (Activity & Use Case Diagram) untuk memastikan kepatuhan terhadap prosedur pemerintahan.",
       fullDescription:
-        "Built a comprehensive admin dashboard for e-commerce platform with modern web technologies.\n\nKey Features:\n• Real-time sales analytics and reporting\n• Inventory management system\n• Order processing and tracking\n• Customer relationship management\n• Role-based access control\n• Responsive design for all devices\n• RESTful API backend\n• Database optimization for performance",
+        "Mengembangkan sistem manajemen perubahan terintegrasi untuk Pemerintah Daerah yang terdiri dari web monitoring dan aplikasi mobile Android. Sistem ini memungkinkan teknisi melakukan inspeksi lapangan, pencatatan hasil implementasi, serta monitoring real-time oleh berbagai stakeholder (teknisi, kepala seksi, kepala bidang, hingga Diskominfo).Proyek ini mengintegrasikan Service Desk dan Asset Management melalui API untuk sinkronisasi data real-time, dengan fokus pada efisiensi operasional lintas platform. Perancangan menggunakan metodologi UML, activity diagram, dan use case diagram untuk memastikan setiap proses bisnis tergambar jelas dan dapat diimplementasikan secara efektif sesuai prosedur pemerintahan. Buatlah menjadi short description",
       technologies: [
-        "React",
-        "Node.js",
-        "MongoDB",
-        "Express",
-        "TailwindCSS",
-        "Chart.js",
+        "Android Jetpack Compose",
+        "REST APIs",
+        "Retrofit",
+        "Room Persistence Library",
+        "Project Management",
       ],
       link: "https://github.com/yourusername/ecommerce-dashboard",
       images: [
-        "https://via.placeholder.com/800x450?text=Dashboard+Overview",
-        "https://via.placeholder.com/800x450?text=Analytics+Chart",
+        "/images/skt-1.jpg",
+        "/images/skt-2.jpg",
+        "/images/skt-3.jpg",
+        "/images/skt-4.jpg",
+        "/images/skt-5.jpg",
+        "/images/skt-6.jpg",
+        "/images/skt-7.jpg",
+        "/images/skt-8.jpg",
       ],
-      imageOrientation: "landscape",
+      imageOrientation: "portrait",
     },
     {
       id: 4,
-      title: "Customer Segmentation Analysis",
-      category: "data",
+      title: "Story App - Social Media with Maps, Localization & Paginations",
+      category: "mobile",
       shortDescription:
-        "Machine learning project for customer segmentation using clustering algorithms and data visualization.",
+        "Social media application with map integration, localization features, and pagination.",
       fullDescription:
-        "Performed comprehensive customer segmentation analysis using advanced data science techniques.\n\nKey Highlights:\n• Exploratory Data Analysis (EDA) on customer dataset\n• K-Means and Hierarchical Clustering implementation\n• RFM (Recency, Frequency, Monetary) analysis\n• Interactive data visualizations with Plotly\n• Feature engineering and dimensionality reduction\n• Business insights and recommendations\n• Automated reporting pipeline",
+        "Designed and developed a fully functional social media application as a final submission for the Intermediate Mobile Development course at Dicoding Academy. This app allows users to share moments (stories) with photos, descriptions, and location tags.\n\nKey Features & Technical Implementations:\nAuthentication & Security: Implemented secure Login and Register flows with token-based session management.\nAdvanced UI/UX: Built a responsive UI with Infinite Scrolling (Pagination) to load stories efficiently.\nGeolocation Integration: Integrated Google Maps SDK to allow users to tag their location when posting and view story locations on an interactive map.\nMedia Handling: Enabled camera and gallery access for image uploading with compression logic.\nLocalization: Added multi-language support (Localization/l10n) and accessibility features.\nArchitecture: Utilized Clean Architecture principles with Code Generation for robust and maintainable code",
       technologies: [
-        "Python",
-        "Pandas",
-        "Scikit-learn",
-        "Plotly",
-        "Jupyter",
-        "SQL",
+        "Flutter",
+        "Dart",
+        "Google Maps API",
+        "GoRouter",
+        "REST APIs",
+        "Localization",
+        "Pagination",
       ],
       link: "https://github.com/yourusername/customer-segmentation",
       images: [
-        "https://via.placeholder.com/800x450?text=Clustering+Visualization",
-        "https://via.placeholder.com/800x450?text=RFM+Analysis",
+        "images/strflt-1.jpg",
+        "images/strflt-2.jpg",
+        "images/strflt-3.jpg",
+        "images/strflt-4.jpg",
+        "images/strflt-5.jpg",
+        "images/strflt-6.jpg",
       ],
+      imageOrientation: "portrait",
+    },
+    {
+      id: 5,
+      title: "Asclepius - Skin Cancer Detection with TensorFlow Lite",
+      category: "mobile",
+      shortDescription:
+        "Mobile app for detecting skin cancer using TensorFlow Lite ML model with real-time image analysis.",
+      fullDescription:
+        "Developed Asclepius, an intelligent Android application capable of analyzing skin lesions to detect potential signs of cancer. This project focuses on integrating a pre-trained Machine Learning model directly into the mobile application for offline inference.\n\nKey Technical Implementations:\n\nTensorFlow Lite Integration: Successfully integrated a .tflite model to perform image classification (Cancer vs. Non-Cancer) directly on the device with low latency.\n\nImage Pre-processing: Implemented advanced image manipulation using uCrop library to crop and rotate images before analysis, ensuring optimal model accuracy.\n\nResult Visualization: Displayed classification results along with a Confidence Score (%) to interpret the model's certainty level.\n\nMedia Handling: Managed implicit intents to retrieve images securely from the device gallery.",
+      technologies: [
+        "Android",
+        "Kotlin",
+        "TensorFlow Lite",
+        "ML Kit",
+        "uCrop Library",
+        "REST APIs",
+      ],
+      link: "https://github.com/yourusername/asclepius",
+      images: ["images/asc-1.jpg", "images/asc-2.jpg"],
       imageOrientation: "landscape",
     },
   ];
@@ -197,22 +227,26 @@ export const Projects = () => {
                 >
                   {/* Image Gallery - Adjusted for orientation */}
                   <div
-                    className={`relative bg-gradient-to-br from-blue-900/20 to-cyan-900/20 flex items-center justify-center group ${
+                    className={`relative bg-gradient-to-br from-blue-900/20 to-cyan-900/20 group overflow-hidden ${
                       isPortrait ? "aspect-[9/16] max-h-96" : "aspect-video"
                     }`}
                   >
-                    <img
-                      src={project.images[currentIdx]}
-                      alt={`${project.title} - Image ${currentIdx + 1}`}
-                      className={`w-full h-full ${
-                        isPortrait ? "object-contain" : "object-cover"
-                      }`}
-                      onError={(e) => {
-                        e.target.src = `https://via.placeholder.com/${
-                          isPortrait ? "450x800" : "800x450"
-                        }?text=${project.title}`;
-                      }}
-                    />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <img
+                        src={project.images[currentIdx]}
+                        alt={`${project.title} - Image ${currentIdx + 1}`}
+                        className={`${
+                          isPortrait
+                            ? "h-full w-auto object-contain"
+                            : "w-full h-full object-cover"
+                        }`}
+                        onError={(e) => {
+                          e.target.src = `https://via.placeholder.com/${
+                            isPortrait ? "450x800" : "800x450"
+                          }?text=${project.title}`;
+                        }}
+                      />
+                    </div>
 
                     {/* Navigation Buttons */}
                     {totalImages > 1 && (
