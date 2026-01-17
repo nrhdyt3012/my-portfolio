@@ -1,7 +1,62 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import { GraduationCap, Briefcase, Award, Code2 } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
 
 export const About = () => {
+  const [counts, setCounts] = useState({
+    projects: 0,
+    stacks: 0,
+    years: 0,
+    commitment: 0,
+  });
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const statsRef = useRef(null);
+
+  const stats = [
+    { key: "projects", number: 15, suffix: "+", label: "Projects Completed" },
+    { key: "stacks", number: 4, suffix: "", label: "Tech Stacks" },
+    { key: "years", number: 2, suffix: "+", label: "Years Experience" },
+    { key: "commitment", number: 100, suffix: "%", label: "Commitment" },
+  ];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+
+          // Animate each counter
+          stats.forEach((stat) => {
+            const duration = 2000; // 2 seconds
+            const steps = 60;
+            const increment = stat.number / steps;
+            let current = 0;
+
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= stat.number) {
+                current = stat.number;
+                clearInterval(timer);
+              }
+
+              setCounts((prev) => ({
+                ...prev,
+                [stat.key]: Math.floor(current),
+              }));
+            }, duration / steps);
+          });
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasAnimated]);
+
   const skillCategories = [
     {
       title: "Mobile Development",
@@ -45,13 +100,6 @@ export const About = () => {
     },
   ];
 
-  const stats = [
-    { number: "15+", label: "Projects Completed" },
-    { number: "4", label: "Tech Stacks" },
-    { number: "2+", label: "Years Experience" },
-    { number: "100%", label: "Commitment" },
-  ];
-
   return (
     <section
       id="about"
@@ -71,14 +119,18 @@ export const About = () => {
           </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          <div
+            ref={statsRef}
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
+          >
             {stats.map((stat, idx) => (
               <div
                 key={idx}
                 className="bg-white/5 border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
-                  {stat.number}
+                  {counts[stat.key]}
+                  {stat.suffix}
                 </div>
                 <div className="text-gray-400 text-sm">{stat.label}</div>
               </div>
