@@ -1,7 +1,6 @@
-import { useEffect } from "react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
-export const RevealOnScroll = ({ children }) => {
+export const RevealOnScroll = ({ children, threshold = 0.1 }) => {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -11,15 +10,22 @@ export const RevealOnScroll = ({ children }) => {
           ref.current.classList.add("visible");
         }
       },
-      { threshold: 0.2, rootMargin: "0px 0px -50px 0px" }
+      {
+        threshold: threshold, // Lebih rendah = lebih cepat trigger
+        rootMargin: "0px 0px -20px 0px", // Kurangi rootMargin negatif
+      }
     );
 
-    if (ref.current) observer.observe(ref.current);
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
 
     return () => {
-      observer.disconnect();
+      if (observer) {
+        observer.disconnect();
+      }
     };
-  }, []);
+  }, [threshold]);
 
   return (
     <div ref={ref} className="reveal">

@@ -1,17 +1,43 @@
-import { RevealOnScroll } from "../RevealOnScroll";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   ChevronLeft,
   ChevronRight,
   ChevronDown,
   ChevronUp,
   ExternalLink,
+  ImageOff,
 } from "lucide-react";
+
+// Component RevealOnScroll LOKAL (di dalam file ini)
+const RevealOnScroll = ({ children }) => {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          ref.current.classList.add("visible");
+        }
+      },
+      { threshold: 0.05, rootMargin: "0px" }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref} className="reveal">
+      {children}
+    </div>
+  );
+};
 
 export const Projects = () => {
   const [activeTab, setActiveTab] = useState("all");
   const [expandedProjects, setExpandedProjects] = useState({});
   const [currentImageIndex, setCurrentImageIndex] = useState({});
+  const [imageErrors, setImageErrors] = useState({});
 
   const categories = [
     { id: "all", label: "All Projects", icon: "🚀" },
@@ -46,7 +72,7 @@ export const Projects = () => {
         "/images/gce-4.jpg",
         "/images/gce-5.jpg",
       ],
-      imageOrientation: "landscape", // landscape atau portrait
+      imageOrientation: "landscape",
     },
     {
       id: 2,
@@ -121,12 +147,12 @@ export const Projects = () => {
       ],
       link: "https://github.com/yourusername/customer-segmentation",
       images: [
-        "images/strflt-1.jpg",
-        "images/strflt-2.jpg",
-        "images/strflt-3.jpg",
-        "images/strflt-4.jpg",
-        "images/strflt-5.jpg",
-        "images/strflt-6.jpg",
+        "/images/strflt-1.jpg",
+        "/images/strflt-2.jpg",
+        "/images/strflt-3.jpg",
+        "/images/strflt-4.jpg",
+        "/images/strflt-5.jpg",
+        "/images/strflt-6.jpg",
       ],
       imageOrientation: "portrait",
     },
@@ -147,7 +173,7 @@ export const Projects = () => {
         "REST APIs",
       ],
       link: "https://github.com/yourusername/asclepius",
-      images: ["images/asc-1.jpg", "images/asc-2.jpg"],
+      images: ["/images/asc-1.jpg", "/images/asc-2.jpg"],
       imageOrientation: "landscape",
     },
     {
@@ -199,12 +225,12 @@ Aplikasi ini membantu petani membuat keputusan berbasis data untuk optimasi prak
       ],
       link: "https://github.com/yourusername/asclepius",
       images: [
-        "images/plt-1.jpg",
-        "images/plt-2.jpg",
-        "images/plt-3.jpg",
-        "images/plt-4.jpg",
-        "images/plt-5.jpg",
-        "images/plt-6.jpg",
+        "/images/plt-1.jpg",
+        "/images/plt-2.jpg",
+        "/images/plt-3.jpg",
+        "/images/plt-4.jpg",
+        "/images/plt-5.jpg",
+        "/images/plt-6.jpg",
       ],
       imageOrientation: "portrait",
     },
@@ -239,7 +265,7 @@ Quality Assurance: Wrote comprehensive Unit Tests using Mockito to verify the lo
         "Android Development",
       ],
       link: "https://github.com/yourusername/asclepius",
-      images: ["images/dcs-1.jpg"],
+      images: ["/images/dcs-1.jpg"],
       imageOrientation: "landscape",
     },
     {
@@ -267,11 +293,11 @@ Storage & Database: Utilized AWS S3 for media storage (Cover Art) and PostgreSQL
       ],
       link: "https://github.com/yourusername/asclepius",
       images: [
-        "images/opm-1.jpg",
-        "images/opm-2.jpg",
-        "images/opm-3.jpg",
-        "images/opm-4.jpg",
-        "images/opm-5.jpg",
+        "/images/opm-1.jpg",
+        "/images/opm-2.jpg",
+        "/images/opm-3.jpg",
+        "/images/opm-4.jpg",
+        "/images/opm-5.jpg",
       ],
       imageOrientation: "landscape",
     },
@@ -303,16 +329,16 @@ Student portal to view personal information, bills, and payment history`,
       ],
       link: "https://github.com/yourusername/asclepius",
       images: [
-        "images/ppm-1.jpg",
-        "images/ppm-2.jpg",
-        "images/ppm-3.jpg",
-        "images/ppm-4.jpg",
-        "images/ppm-5.jpg",
-        "images/ppm-6.jpg",
-        "images/ppm-7.jpg",
-        "images/ppm-8.jpg",
-        "images/ppm-9.jpg",
-        "images/ppm-10.jpg",
+        "/images/ppm-1.jpg",
+        "/images/ppm-2.jpg",
+        "/images/ppm-3.jpg",
+        "/images/ppm-4.jpg",
+        "/images/ppm-5.jpg",
+        "/images/ppm-6.jpg",
+        "/images/ppm-7.jpg",
+        "/images/ppm-8.jpg",
+        "/images/ppm-9.jpg",
+        "/images/ppm-10.jpg",
       ],
       imageOrientation: "landscape",
     },
@@ -337,7 +363,7 @@ State Management: Applied ViewModel and State Hoisting to handle data flow and e
 Search Feature: Integrated real-time filtering logic to allow users to quickly find fish species by name.`,
       technologies: ["Kotlin", "Jetpack Compose", "Navigation Component"],
       link: "https://github.com/yourusername/asclepius",
-      images: ["images/mf-1.jpg", "images/mf-2.jpg"],
+      images: ["/images/mf-1.jpg", "/images/mf-2.jpg"],
       imageOrientation: "portrait",
     },
     {
@@ -362,11 +388,11 @@ Search Feature: Integrated real-time filtering logic to allow users to quickly f
       technologies: ["SQL", "Tableau", "Power BI", "Excel", "ChatGPT"],
       link: "https://github.com/yourusername/asclepius",
       images: [
-        "images/daudm-1.jpg",
-        "images/daudm-2.jpg",
-        "images/daudm-3.jpg",
-        "images/daudm-4.jpg",
-        "images/daudm-5.jpg",
+        "/images/daudm-1.jpg",
+        "/images/daudm-2.jpg",
+        "/images/daudm-3.jpg",
+        "/images/daudm-4.jpg",
+        "/images/daudm-5.jpg",
       ],
       imageOrientation: "landscape",
     },
@@ -403,18 +429,28 @@ Search Feature: Integrated real-time filtering logic to allow users to quickly f
     });
   };
 
+  const handleImageError = (projectId, imageIdx) => {
+    setImageErrors((prev) => ({
+      ...prev,
+      [`${projectId}-${imageIdx}`]: true,
+    }));
+  };
+
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-center justify-center py-20"
+      className="min-h-screen flex items-center justify-center py-20 bg-gradient-to-b from-blue-500/5 to-transparent"
     >
-      <RevealOnScroll>
-        <div className="max-w-6xl mx-auto px-4 w-full">
+      <div className="max-w-6xl mx-auto px-4 w-full">
+        {/* Header */}
+        <RevealOnScroll>
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
             Featured Projects
           </h2>
+        </RevealOnScroll>
 
-          {/* Tabs */}
+        {/* Tabs */}
+        <RevealOnScroll>
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             {categories.map((cat) => (
               <button
@@ -431,45 +467,54 @@ Search Feature: Integrated real-time filtering logic to allow users to quickly f
               </button>
             ))}
           </div>
+        </RevealOnScroll>
 
-          {/* Projects Grid */}
+        {/* Projects Grid */}
+        <RevealOnScroll>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {filteredProjects.map((project) => {
               const isExpanded = expandedProjects[project.id];
               const currentIdx = currentImageIndex[project.id] || 0;
               const totalImages = project.images.length;
               const isPortrait = project.imageOrientation === "portrait";
+              const currentImageKey = `${project.id}-${currentIdx}`;
+              const hasImageError = imageErrors[currentImageKey];
 
               return (
                 <div
                   key={project.id}
-                  className="rounded-xl border border-white/10 overflow-hidden hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all"
+                  className="rounded-xl border border-white/10 overflow-hidden hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all bg-white/5"
                 >
-                  {/* Image Gallery - Adjusted for orientation */}
+                  {/* Image Gallery */}
                   <div
-                    className={`relative bg-gradient-to-br from-blue-900/20 to-cyan-900/20 group overflow-hidden ${
+                    className={`relative bg-gradient-to-br from-gray-800 to-gray-900 group overflow-hidden ${
                       isPortrait ? "aspect-[9/16] max-h-96" : "aspect-video"
                     }`}
                   >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <img
-                        src={project.images[currentIdx]}
-                        alt={`${project.title} - Image ${currentIdx + 1}`}
-                        className={`${
-                          isPortrait
-                            ? "h-full w-auto object-contain"
-                            : "w-full h-full object-cover"
-                        }`}
-                        onError={(e) => {
-                          e.target.src = `https://via.placeholder.com/${
-                            isPortrait ? "450x800" : "800x450"
-                          }?text=${project.title}`;
-                        }}
-                      />
-                    </div>
+                    {hasImageError ? (
+                      <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-500">
+                        <ImageOff size={48} className="mb-2" />
+                        <p className="text-sm">Image not available</p>
+                      </div>
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <img
+                          src={project.images[currentIdx]}
+                          alt={`${project.title} - Image ${currentIdx + 1}`}
+                          className={`${
+                            isPortrait
+                              ? "h-full w-auto object-contain"
+                              : "w-full h-full object-cover"
+                          }`}
+                          onError={() =>
+                            handleImageError(project.id, currentIdx)
+                          }
+                        />
+                      </div>
+                    )}
 
                     {/* Navigation Buttons */}
-                    {totalImages > 1 && (
+                    {totalImages > 1 && !hasImageError && (
                       <>
                         <button
                           onClick={() => handlePrevImage(project.id)}
@@ -507,7 +552,7 @@ Search Feature: Integrated real-time filtering logic to allow users to quickly f
                       </span>
                     </div>
 
-                    <h3 className="text-xl font-bold mb-3 line-clamp-2">
+                    <h3 className="text-xl font-bold mb-3 line-clamp-2 text-gray-100">
                       {project.title}
                     </h3>
 
@@ -596,17 +641,17 @@ Search Feature: Integrated real-time filtering logic to allow users to quickly f
               );
             })}
           </div>
+        </RevealOnScroll>
 
-          {/* Empty State */}
-          {filteredProjects.length === 0 && (
-            <div className="text-center py-20">
-              <p className="text-gray-500 text-lg">
-                No projects found in this category yet.
-              </p>
-            </div>
-          )}
-        </div>
-      </RevealOnScroll>
+        {/* Empty State */}
+        {filteredProjects.length === 0 && (
+          <div className="text-center py-20">
+            <p className="text-gray-500 text-lg">
+              No projects found in this category yet.
+            </p>
+          </div>
+        )}
+      </div>
     </section>
   );
 };
