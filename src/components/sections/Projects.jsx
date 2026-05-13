@@ -64,7 +64,7 @@ export const Projects = () => {
         "PHP",
         "Node.js",
       ],
-      link: "https://github.com/yourusername/money-tracker-cloud",
+      link: "https://github.com/nrhdyt3012/money-tracker-cloud",
       images: [
         "/images/gce-1.jpg",
         "/images/gce-2.jpg",
@@ -91,7 +91,7 @@ export const Projects = () => {
         "Gradle",
         "GitHub Actions",
       ],
-      link: "https://github.com/yourusername/movie-catalog",
+      link: "https://github.com/nrhdyt3012/movie-catalog",
       images: [
         "/images/mcl-1.jpg",
         "/images/mcl-2.jpg",
@@ -115,7 +115,7 @@ export const Projects = () => {
         "Room Persistence Library",
         "Project Management",
       ],
-      link: "https://github.com/yourusername/ecommerce-dashboard",
+      link: "https://github.com/nrhdyt3012/ecommerce-dashboard",
       images: [
         "/images/skt-1.jpg",
         "/images/skt-2.jpg",
@@ -145,7 +145,7 @@ export const Projects = () => {
         "Localization",
         "Pagination",
       ],
-      link: "https://github.com/yourusername/customer-segmentation",
+      link: "https://github.com/nrhdyt3012/customer-segmentation",
       images: [
         "/images/strflt-1.jpg",
         "/images/strflt-2.jpg",
@@ -172,7 +172,7 @@ export const Projects = () => {
         "uCrop Library",
         "REST APIs",
       ],
-      link: "https://github.com/yourusername/asclepius",
+      link: "https://github.com/nrhdyt3012/asclepius",
       images: ["/images/asc-1.jpg", "/images/asc-2.jpg"],
       imageOrientation: "landscape",
     },
@@ -223,7 +223,7 @@ Aplikasi ini membantu petani membuat keputusan berbasis data untuk optimasi prak
         "Dependency Injection",
         "REST APIs",
       ],
-      link: "https://github.com/yourusername/asclepius",
+      link: "https://github.com/nrhdyt3012/asclepius",
       images: [
         "/images/plt-1.jpg",
         "/images/plt-2.jpg",
@@ -264,7 +264,7 @@ Quality Assurance: Wrote comprehensive Unit Tests using Mockito to verify the lo
         "Animation",
         "Android Development",
       ],
-      link: "https://github.com/yourusername/asclepius",
+      link: "https://github.com/nrhdyt3012/asclepius",
       images: ["/images/dcs-1.jpg"],
       imageOrientation: "landscape",
     },
@@ -291,7 +291,7 @@ Storage & Database: Utilized AWS S3 for media storage (Cover Art) and PostgreSQL
         "RabbitMQ",
         "Mail Servers",
       ],
-      link: "https://github.com/yourusername/asclepius",
+      link: "https://github.com/nrhdyt3012/asclepius",
       images: [
         "/images/opm-1.jpg",
         "/images/opm-2.jpg",
@@ -327,7 +327,7 @@ Student portal to view personal information, bills, and payment history`,
         "Tailwind CSS",
         "React Hooks",
       ],
-      link: "https://github.com/yourusername/asclepius",
+      link: "https://github.com/nrhdyt3012/asclepius",
       images: [
         "/images/ppm-1.jpg",
         "/images/ppm-2.jpg",
@@ -362,7 +362,7 @@ State Management: Applied ViewModel and State Hoisting to handle data flow and e
 
 Search Feature: Integrated real-time filtering logic to allow users to quickly find fish species by name.`,
       technologies: ["Kotlin", "Jetpack Compose", "Navigation Component"],
-      link: "https://github.com/yourusername/asclepius",
+      link: "https://github.com/nrhdyt3012/asclepius",
       images: ["/images/mf-1.jpg", "/images/mf-2.jpg"],
       imageOrientation: "portrait",
     },
@@ -386,7 +386,7 @@ Search Feature: Integrated real-time filtering logic to allow users to quickly f
 📉 Statistik Dasar untuk Analisis Data
  Mempelajari konsep penting seperti mean, median, mode, hingga standard deviation untuk memahami makna di balik angka.`,
       technologies: ["SQL", "Tableau", "Power BI", "Excel", "ChatGPT"],
-      link: "https://github.com/yourusername/asclepius",
+      link: "https://github.com/nrhdyt3012/asclepius",
       images: [
         "/images/daudm-1.jpg",
         "/images/daudm-2.jpg",
