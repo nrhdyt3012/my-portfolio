@@ -64,7 +64,7 @@ export const Projects = () => {
         "PHP",
         "Node.js",
       ],
-      link: "https://github.com/nrhdyt3012/money-tracker-cloud",
+      link: "https://github.com/nrhdyt3012/money-tracker",
       images: [
         "/images/gce-1.jpg",
         "/images/gce-2.jpg",
