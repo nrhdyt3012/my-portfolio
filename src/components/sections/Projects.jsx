@@ -115,7 +115,7 @@ export const Projects = () => {
         "Room Persistence Library",
         "Project Management",
       ],
-      link: "https://github.com/nrhdyt3012/ecommerce-dashboard",
+      link: "https://github.com/nrhdyt3012/sakti",
       images: [
         "/images/skt-1.jpg",
         "/images/skt-2.jpg",
@@ -145,7 +145,7 @@ export const Projects = () => {
         "Localization",
         "Pagination",
       ],
-      link: "https://github.com/nrhdyt3012/customer-segmentation",
+      link: "https://github.com/nrhdyt3012/story_app",
       images: [
         "/images/strflt-1.jpg",
         "/images/strflt-2.jpg",
@@ -223,7 +223,7 @@ Aplikasi ini membantu petani membuat keputusan berbasis data untuk optimasi prak
         "Dependency Injection",
         "REST APIs",
       ],
-      link: "https://github.com/nrhdyt3012/asclepius",
+      link: "https://github.com/nrhdyt3012/PlantRo",
       images: [
         "/images/plt-1.jpg",
         "/images/plt-2.jpg",
@@ -264,7 +264,7 @@ Quality Assurance: Wrote comprehensive Unit Tests using Mockito to verify the lo
         "Animation",
         "Android Development",
       ],
-      link: "https://github.com/nrhdyt3012/asclepius",
+      link: "https://github.com/nrhdyt3012/DicodingStory",
       images: ["/images/dcs-1.jpg"],
       imageOrientation: "landscape",
     },
@@ -291,7 +291,7 @@ Storage & Database: Utilized AWS S3 for media storage (Cover Art) and PostgreSQL
         "RabbitMQ",
         "Mail Servers",
       ],
-      link: "https://github.com/nrhdyt3012/asclepius",
+      link: "https://github.com/nrhdyt3012/openmusic-api",
       images: [
         "/images/opm-1.jpg",
         "/images/opm-2.jpg",
@@ -327,7 +327,7 @@ Student portal to view personal information, bills, and payment history`,
         "Tailwind CSS",
         "React Hooks",
       ],
-      link: "https://github.com/nrhdyt3012/asclepius",
+      link: "https://github.com/nrhdyt3012/pppm-bm",
       images: [
         "/images/ppm-1.jpg",
         "/images/ppm-2.jpg",
@@ -362,7 +362,7 @@ State Management: Applied ViewModel and State Hoisting to handle data flow and e
 
 Search Feature: Integrated real-time filtering logic to allow users to quickly find fish species by name.`,
       technologies: ["Kotlin", "Jetpack Compose", "Navigation Component"],
-      link: "https://github.com/nrhdyt3012/asclepius",
+      link: "https://github.com/nrhdyt3012/myFish",
       images: ["/images/mf-1.jpg", "/images/mf-2.jpg"],
       imageOrientation: "portrait",
     },
