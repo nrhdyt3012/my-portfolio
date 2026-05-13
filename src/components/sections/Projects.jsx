@@ -91,7 +91,7 @@ export const Projects = () => {
         "Gradle",
         "GitHub Actions",
       ],
-      link: "https://github.com/nrhdyt3012/movie-catalog",
+      link: "https://github.com/nrhdyt3012/moviecatalog",
       images: [
         "/images/mcl-1.jpg",
         "/images/mcl-2.jpg",
