@@ -128,10 +128,10 @@ export const Contact = () => {
                 </h3>
                 <p className="text-gray-400">
                   <a
-                    href="mailto:your.email@gmail.com"
+                    href="mailto:nurhidayatd63@gmail.com"
                     className="hover:text-blue-400 transition"
                   >
-                    your.email@gmail.com
+                    nurhidayatd63@gmail.com
                   </a>
                 </p>
               </div>
@@ -142,18 +142,18 @@ export const Contact = () => {
                 </h3>
                 <div className="space-y-2 text-gray-400">
                   <p>
-                    <a href="#" className="hover:text-blue-400 transition">
+                    <a href="https://github.com/nrhdyt3012" className="hover:text-blue-400 transition">
                       GitHub
                     </a>
                   </p>
                   <p>
-                    <a href="#" className="hover:text-blue-400 transition">
+                    <a href="https://www.linkedin.com/in/dwi-nurhidayat-731221254" className="hover:text-blue-400 transition">
                       LinkedIn
                     </a>
                   </p>
                   <p>
-                    <a href="#" className="hover:text-blue-400 transition">
-                      Twitter
+                    <a href="https://www.instagram.com/atdaythirty" className="hover:text-blue-400 transition">
+                      Instagram
                     </a>
                   </p>
                 </div>
