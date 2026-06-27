@@ -45,37 +45,36 @@ export const Projects = () => {
   };
 
   const projects = [
-    {
-      id: 9,
-      title: "Web-Based SPP Payment Management Information System",
-      category: "web",
-      shortDescription:
-        "A web-based SPP payment management system with multi-method digital payment integration (Virtual Account, E-wallet, QRIS via Midtrans) for Pondok Pesantren Baitul Makmur — replacing a fully manual process prone to recording errors.",
-      fullDescription:
-        "Designed and developed a web-based SPP (school fee) payment management information system with digital payment integration for Pondok Pesantren Pelajar Mahasiswa Baitul Makmur. This system replaces the previous manual payment process that was prone to recording errors, long verification queues, and limited access to real-time payment status information.\n\nDeveloped using the Rapid Application Development (RAD) methodology, enabling fast development with intensive iterations and actively involving users at every stage.\n\nKey Features:\n• Admin dashboard with student statistics, billing, and revenue tracking\n• Student data management and SPP billing master data\n• Automated billing assignment system for students\n• Multi-method digital payment integration (Virtual Account, E-wallet, QRIS) through Midtrans\n• Payment and arrears reports with graph visualization\n• Automatic payment receipt printing\n• Real-time payment status notifications\n• Student portal to view personal information, bills, and payment history",
-      technologies: [
-        "Next.js",
-        "React.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "React Hooks",
-        "Midtrans",
-      ],
-      link: "https://github.com/nrhdyt3012/pppm-bm",
-      images: [
-        "/images/ppm-1.jpg",
-        "/images/ppm-2.jpg",
-        "/images/ppm-3.jpg",
-        "/images/ppm-4.jpg",
-        "/images/ppm-5.jpg",
-        "/images/ppm-6.jpg",
-        "/images/ppm-7.jpg",
-        "/images/ppm-8.jpg",
-        "/images/ppm-9.jpg",
-        "/images/ppm-10.jpg",
-      ],
-      imageOrientation: "landscape",
-    },
+{
+  "id": 9,
+  "title": "Web-Based Student Tuition Administration System at KB/TK ABA 1 Buduran",
+  "category": "web",
+  "shortDescription": "A web-based student administration and tuition management system integrated with Midtrans Payment Gateway and Fonnte WhatsApp API for KB/TK Aisyiyah Bustanul Athfal 1 Buduran, transforming manual tracking into an automated ecosystem.",
+  "fullDescription": "Designed and developed a comprehensive web-based student administration and tuition management system for KB/TK Aisyiyah Bustanul Athfal 1 Buduran. This system replaces the previous manual financial tracking that was highly vulnerable to technical constraints, double billing, and physical paperwork bottlenecks.\n\nDeveloped using the Rapid Application Development (RAD) methodology, ensuring fast development with intensive iterations while actively incorporating user feedback at every deployment phase.\n\nKey Features:\n• Advanced admin dashboard with student census metrics, live billing ratios, and weekly/monthly revenue tracking\n• Secure multi-user Role-Based Access Control (RBAC) separating administrative privileges for Superadmins, Treasurers, and Parents\n• Centralized student data registry and dynamic school fee configuration interfaces\n• Multi-method payment gateway integration (Virtual Accounts, E-Wallets, and QRIS) powered by Midtrans SNAP API for instant, automated transaction verification\n• Automated communication infrastructure using Fonnte WhatsApp API to broadcast real-time billing reminders and digital payment receipts directly to parents\n• Interactive financial analytics module showcasing 6-month transaction and outstanding arrears trends with native Excel reporting export capabilities\n• Automated digital receipt generation system producing official, electronically-verified transaction documents with tamper-proof indicators\n• Secure system infrastructure featuring an automated audit trail/changelog engine that meticulously logs all administrative CRUD operations to ensure absolute operational transparency",
+  "technologies": [
+    "Next.js",
+    "React.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Supabase",
+    "Midtrans API",
+    "Fonnte API"
+  ],
+  "link": "https://github.com/nrhdyt3012/pppm-bm",
+  "images": [
+    "/images/ppm-1.jpg",
+    "/images/ppm-2.jpg",
+    "/images/ppm-3.jpg",
+    "/images/ppm-4.jpg",
+    "/images/ppm-5.jpg",
+    "/images/ppm-6.jpg",
+    "/images/ppm-7.jpg",
+    "/images/ppm-8.jpg",
+    "/images/ppm-9.jpg",
+    "/images/ppm-10.jpg"
+  ],
+  "imageOrientation": "landscape"
+},
     {
       id: 6,
       title: "PlantRo - Smart Crop Rotation Recommendation System",
