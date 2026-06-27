@@ -12,20 +12,13 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-10"
     >
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-cyan-500/5 animate-pulse" />
 
       <RevealOnScroll>
         <div className="text-center z-10 px-4 max-w-4xl mx-auto">
-          {/* Greeting Badge */}
-          <div className="inline-block mb-6">
-            <span className="bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm font-medium border border-blue-500/20">
-              👋 Welcome to my portfolio
-            </span>
-          </div>
-
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
             <span className="block text-gray-200 mb-2">Hi, I'm</span>
@@ -80,14 +73,6 @@ export const Home = () => {
             >
               Let's Connect
             </a>
-          </div>
-
-          {/* Scroll Indicator */}
-          <div className="mt-16 flex flex-col items-center gap-2 animate-bounce">
-            <span className="text-gray-500 text-sm">Scroll to explore</span>
-            <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex items-start justify-center p-1">
-              <div className="w-1.5 h-3 bg-blue-500 rounded-full animate-pulse" />
-            </div>
           </div>
         </div>
       </RevealOnScroll>
